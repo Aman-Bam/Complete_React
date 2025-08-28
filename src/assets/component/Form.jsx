@@ -80,7 +80,7 @@ const Form = () => {
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+            className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-black ${
               errors.name ? 'border-red-500' : 'border-gray-600'
             }`}
             placeholder="Enter your name"
@@ -96,7 +96,7 @@ const Form = () => {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+            className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-black ${
               errors.email ? 'border-red-500' : 'border-gray-700'
             }`}
             placeholder="Enter your email"
@@ -112,7 +112,7 @@ const Form = () => {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+            className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-black ${
               errors.password ? 'border-red-500' : 'border-gray-700'
             }`}
             placeholder="Enter your password"
