@@ -2,13 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* *{
-    background-color: rgb(47, 45, 45);
+*{
+    background-color: #000000;
     color: rgb(255, 255, 255);
-    padding: 0px;
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 3px;
-    
-} */
+}

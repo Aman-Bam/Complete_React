@@ -13,17 +13,18 @@
 // import Form from "./assets/component/form";
 // import Meal from "./Food_Recipee/Meal";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import About from "./Reactrouterdom/About";
-import Contact from "./Reactrouterdom/Contact";
-import Home from "./Reactrouterdom/Home";
-import Product from "./Reactrouterdom/Product";
-import Team from "./Reactrouterdom/Team";
-import Coursedetails from "./Reactrouterdom/Coursedetails";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Product from "./pages/Product";
+import Team from "./pages/Team";
+import Coursedetails from "./pages/Coursedetails";
 
 const App = () => {
   return (
     <>
       {/* <div>
+
         <div>
         <Product
           title="iphone 14"
@@ -56,13 +57,11 @@ const App = () => {
           Buy="YES/NO"
         ></Product>
       </div>
-
       <div>
         <Marvelsalary name="Ironman" age="100" salary={100000} />
         <Marvelsalary name="Spiderman" age="69" salary={300} />
         <Marvelsalary name="hulk" age="650" salary={50} />
       </div>
-
       <div>
         <Age name="aman" age="18"></Age>
       </div>
@@ -116,21 +115,20 @@ const App = () => {
         
             <Apnaclzproduct />
 
-         <Meal /> 
-      </div> */}
+         <Meal />
+
+      </div>  */}
 
       <Router>
         <Routes>
-          <Route path="/" element={<About />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/product" element={<Product />} />
+          <Route path="/course" element={<Product />} />
           <Route path="/team" element={<Team />} />
-          <Route path="/courses/:id" element={<Courses_Details />} />
+          <Route path="/courses/:id" element={<Coursedetails />} />
         </Routes>
       </Router>
-
-      <Product />
     </>
   );
 };
