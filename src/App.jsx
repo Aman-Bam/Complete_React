@@ -1,21 +1,30 @@
-import React from "react";
-import Product from "./assets/component/Product";
-import Hero from "./assets/component/hero";
-import Marvelsalary from "./assets/component/marvelsalary";
-import Age from "./assets/component/age";
-import Laptop from "./assets/component/Laptop";
-import Event from "./assets/component/event";
-import Counter from "./assets/component/Usestate";
-import Map from "./assets/component/Map";
-import Filter from "./assets/component/Filter";
-import UserEffect from "./assets/component/UserEffect";
-import Fetchdata from "./assets/component/Fetchdata";
-import Form from "./assets/component/form";
+// import React from "react";
+// import Product from "./assets/component/Product";
+// import Hero from "./assets/component/hero";
+// import Marvelsalary from "./assets/component/marvelsalary";
+// import Age from "./assets/component/age";
+// import Laptop from "./assets/component/Laptop";
+// import Event from "./assets/component/event";
+// import Counter from "./assets/component/Usestate";
+// import Map from "./assets/component/Map";
+// import Filter from "./assets/component/Filter";
+// import UserEffect from "./assets/component/UserEffect";
+// import Fetchdata from "./assets/component/Fetchdata";
+// import Form from "./assets/component/form";
+// import Meal from "./Food_Recipee/Meal";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import About from "./Reactrouterdom/About";
+import Contact from "./Reactrouterdom/Contact";
+import Home from "./Reactrouterdom/Home";
+import Product from "./Reactrouterdom/Product";
+import Team from "./Reactrouterdom/Team";
+import Coursedetails from "./Reactrouterdom/Coursedetails";
 
 const App = () => {
   return (
     <>
       {/* <div>
+        <div>
         <Product
           title="iphone 14"
           model="promax"
@@ -89,22 +98,39 @@ const App = () => {
 
       <div>
         <Filter />
-      </div> */}
+      </div>
 
-        {/* <div> 
+        <div> 
 
         <UserEffect />
 
-        </div> */}
+        </div>
 
-        {/* <div>
+        <div>
           <Fetchdata /> 
-          </div> */}
+          </div>
 
           <div className="text-white">
             <Form />
           </div>
         
+            <Apnaclzproduct />
+
+         <Meal /> 
+      </div> */}
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/courses/:id" element={<Courses_Details />} />
+        </Routes>
+      </Router>
+
+      <Product />
     </>
   );
 };
